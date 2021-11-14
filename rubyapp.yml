@@ -19,3 +19,7 @@ spec:
         image: shyamrkg/rubyappnewusertest1
         ports:
         - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /healthcheck
+            port: 8080
